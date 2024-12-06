@@ -1,0 +1,15 @@
+My code is quite simple to understand. We create a servo component with Servo myServo;
+I then made shortcuts for our wires, ex. Int = 9 
+I attached my servo to Pin 9
+And to begin our serial write, we use SerialBegin.
+ int potValue = analogRead(A0);   
+  int servoValue = map(potValue, 0, 1023, 0, 180);  
+These two codes i used to read the analog and input the servo values
+i then used serial print to write our data -  myServo.write(servoValue);   
+I then used Serial.print to print my data
+ Serial.print("Potentiometer Value: ");
+  Serial.print(potValue);
+  Serial.print("/tServo Angle: ");
+  Serial.println(servoValue);
+  and delayed to get a smooth transition 
+  delay(50);  
